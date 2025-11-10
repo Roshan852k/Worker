@@ -1,0 +1,10 @@
+---
+applications:
+  - name: Worker
+    buildpacks:
+      - python_buildpack
+    no-route: true
+    processes:
+      - type: worker
+        command: python app.py
+        memory: 256M
